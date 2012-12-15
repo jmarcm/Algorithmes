@@ -1,0 +1,42 @@
+On va utiliser une boucle pour passer en revue les 25 élèves de la classe.
+COMMENT CALCULER LA MOY MAX. Si la moy max est inférieure à la dernière moyenne calculée alors on garde la dernière moyenne calculée
+COMMENT CALCULER LA MOY MIN. Si la moy min est  On fait une comparaison avec la dernière moyenne calculée si elle plus petite on la garde.
+
+
+Algo: moyennes_classe
+
+Déclarations:
+	nom: chaîne (50) {Pour recueillir le nom de l'élève}
+	maths, info, fr: réels
+	total, coef, moy, moy_classe, smoy, moy_min, moy_max: réels
+	i: entier {l'indice pour passer en revue les élèves}
+	
+Début:
+	coef <- 3+4+2
+	moy_min <- 10 {la note maximale}
+	moy_max <- 0
+	
+	Pour i allant de 1 à 25
+		Faire
+			Ecrire ("Donner le nom de l'élève : ")
+			Lire (nom)
+			Ecrire ("Donner la note en Maths : ")			Lire (maths)			Ecrire ("Donner la note en Informatique : ")			Lire (info)			Ecrire ("Donner la note en Français : ")			Lire (fr)
+			
+			{Les calculs}
+			total <- (maths*3)+(info*4)+(fr*2)
+			moy <- total / coef
+			smoy <- smoy + moy
+			moy_classe <- moy / i
+			
+			Si moy_max <= moy Alors moy_max <- moy FinSi
+			Si moy_min >= moy Alors moy_min <- moy FinSi
+			
+			Ecrire ("L'élève ", nom)
+			Ecrire (" a une moyenne de : ", moy)
+	FinPour
+	
+	Ecrire ("La moyenne minimale de la classe est : ", moy_min)
+	Ecrire ("La moyenne maximale de la classe est : ", moy_max)
+	Ecrire ("La moyenne générale de la classe est : ", moy_classe)
+
+Fin: moyennes_classe

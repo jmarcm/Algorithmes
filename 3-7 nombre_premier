@@ -1,0 +1,60 @@
+BUT:
+	Définir si un nombre est premier:
+		s'il n'admet comme diviseur 1 et lui-même
+		
+METHODE:
+
+	On va passer en revue tous les chiffres de 2 (tous les chiffres sont divisibles par 1) à lui-même -1 (tous les chiffres sont divisibles par eux-mêmes)
+	
+	Si chiffre est divisible par un autre le MOD est égal à O
+	Dans ce cas on attribue une valeur à un testeur.
+	
+	A la fin de la boucle si le testeur a gardé la valeur initiale 
+		
+----
+----
+
+DONNEES A ENTRER:
+	Le nombre à tester
+	
+
+Structure répétitive:
+	nbre indéterminé --> POUR
+		
+	
+Strucutre de choix:
+	 
+	
+Test:
+	
+
+
+Algo: nbre_premier
+
+Déclarations:
+	nbre : réel {le nombre à tester}
+	test : chaîne(30) {pour faire la somme des diviseurs}
+	i: réel {l'indice de la boucle}
+	d: réel {le résultat de la division}
+	
+Début:
+	test <- " est un nombre premier."
+	
+	Ecrire ("Indiquer le nombre à tester (supérieur à 1")
+	Lire (nbre)
+	
+	Pour i allant de 2 à nbre-1
+		Faire
+			d <- nbre MOD i
+			Si d = 0 Alors test <- " n'est pas un nombre premier." FinSi
+	FinPour
+	
+	Ecrire ("Le nombre " ,nbre ,test)
+
+			
+Fin: nbre_premier
+			
+			
+			
+			
+			

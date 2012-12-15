@@ -1,0 +1,37 @@
+Pendant 24 heures toutes les 2 heures	--> boucle décroissante par pas de 2
+										--> déterminée: pour
+INSTRUCTIONS
+	1) Demander la saisie des relévés de température
+	2) Calculer la température moyenne
+		On additionne toutes les températures et on divise par le nombre de mesures
+	3) Calculer l'écart par rapport à la température normale = 37°
+	
+	
+Algo: surveillance_température
+
+Déclarations:
+	i: entier {pour faire avance la boucle par pas de 2 (heures)}
+	n: entier {le nombre de prises}
+	t: réel {la température relevée}
+	tm: réel {la température moyenne}
+	st: réel {la somme des températures}
+	e: réel {l'écart par rapport à la température normale}
+
+Début:
+	st <- 0
+	n <- 1
+	Pour i allant de 0 à 24 pas de 2
+		Faire	Ecrire ("Prenez la température du malade")
+				Ecrire ("Indiquez la température du malade")
+				Lire (t)
+				
+				st <- st + t
+				tm <- st / n
+				e <- tm -37 
+				
+				Ecrire ("Après ", i, "heures de surveillance")
+				Ecrire ("La température moyenne du malade est de : ", tm, "°")
+				Ecrire ("L'écart est de ", e)
+	FinPour
+	
+Fin: surveillance_température

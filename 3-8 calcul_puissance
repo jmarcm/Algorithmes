@@ -1,0 +1,60 @@
+BUT:
+	Définir si un nombre est parfait:
+		s'il est égal à la somme de ses diviseurs
+		
+METHODE:
+
+	On va passer en revue tous les chiffres de 2 (tous les chiffres sont divisibles par 1) à lui-même -1 (tous les chiffres sont divisibles par eux-mêmes)
+	
+	Si chiffre est divisible par un autre le MOD est égal à O
+	Dans ce cas on le rajoute à un total.
+	
+	A la fin de la boucle on compare ce total au chiffre donnée.
+		S'ils sont égaux c'est que ce chiffre est parfait.
+		
+----
+----
+
+DONNEES A ENTRER:
+	Le nombre à tester
+	
+
+Structure répétitive:
+	nbre indéterminé --> POUR
+		
+	
+Strucutre de choix:
+	 
+	
+Test:
+	
+
+
+Algo: calcul_puissance
+
+Déclarations:
+	a, b : réel
+	p: réel {le résulat de l'opération}
+	i: réel {l'indice de la boucle}
+
+
+Début:
+	
+	Ecrire ("Indiquer le nombre (a) strictement positif")
+	Lire (a)
+	Ecrire ("Indiquer le nombre (b) strictement positif")
+	Lire (b)
+	
+	p <- a
+	
+	Si b > 1 Et a > 1
+		Alors
+			Pour i allant de 1 à (b-1)
+				Faire 
+					p <- p*a
+			FinPour
+	FinSi
+
+	Ecrire ("La puissance de " ,a ," par " ,b ," vaut " ,p)
+			
+Fin: calcul_puissance

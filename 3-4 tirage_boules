@@ -1,0 +1,44 @@
+Données à entrer:
+	La couleur de la boule
+	
+Structure répétitive:
+	10 parties --> nbre déterminé --> POUR
+	
+Strucutre de choix:
+	Selon la couleur de la boule --> 
+	
+Test:
+	
+
+
+Algo: tirage_boules
+
+Déclarations:
+	couleur : chaîne(7) {la couleur de la boule}
+	i: entier {pour le nombre de tirages}
+	points, total: entier
+	
+	
+Début:
+	total <- 0
+	
+	Pour i allant de 1 à 10
+		Faire
+			Ecrire ("Prendre une boule")
+			Ecrire ("Indiquez la couleur de la boule - rouge, bleue, noire ou blanche")
+			Lire (couleur)
+			
+			Selon couleur Faire
+				rouge:		points <- 3
+				bleue:		points <- 2
+				noire:		points <- -1
+				blanche:	points <- 0
+				Sinon:		("Désolé votre choix n'a pas été reconnu")
+			FinSelon
+			
+			total <- total + points
+	FinPour
+	
+	Ecrire ("La partie est terminée, vous avez ", total, "points")
+
+Fin: tirage_boules

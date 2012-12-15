@@ -1,0 +1,106 @@
+BUT:
+	Déterminer
+		le prix moyen
+		le prix le plus cher
+		le prix le moins cher
+		
+METHODE:
+
+	Pour calculer le prix moyen, on utiliser la somme/ par le nombre de prix
+	
+	Pour le prix le plus cher
+		on fixe un prix de départ (prix plus cher = 0)
+		si un prix est supérieur alors prix plus cher = prix testé
+		
+	Pour le prix le moins cher
+		on fixe le prix de départ (prix moins cher = 10 ou prix moins cher = prix 1)
+		si un prix est inférieur alors prix moins cher = prix testé
+		
+	On ne sait pas combien de prix il faut saisir
+		On utilise une boucle indéterminée
+		On va poser la question à la fin de la boucle pour savoir s'il y a d'autres prix à entrer.
+		
+----
+----
+
+DONNEES A ENTRER:
+	Le prix de l'article
+	La réponse à la question "Voulez-vous indiquer un autre prix?"
+	
+
+Structure répétitive:
+	nbre indéterminé --> TANT QUE
+	
+	
+Strucutre de choix:
+	Selon la couleur de la boule --> 
+	
+Test:
+	
+
+
+Algo: prix_produits
+
+Déclarations:
+	prix : réel
+	continuer : caractère {pour arrêter ou continuer à saisir des prix}
+	produit, produit_min, produit_max: chaîne(50)
+	prix_moy, prix_min, prix_max : réels
+	total : réel {la somme des prix saisis}
+	i : entier {le nombre de prix saisis}
+	
+	
+	
+Début:
+	total <- 0
+	i <- 0
+	continuer <- O
+	prix_max <- 0
+	
+	Tantque autre_prix = "O"
+		Faire
+			Ecrire ("Indiquer le nom du produit")
+			Lire (produit)
+			
+			Ecrire ("Indiquer le prix du produit")
+			Lire (prix)
+			
+			total <- total + prix
+			i <- i + 1
+			
+			Si i = 1
+				Alors
+					prix_min <- prix {J'ai besoin d'une valeur plancher différente de 0}
+					produit_min <- produit
+			FinSi
+			
+			Si prix > prix_max
+				Alors
+					prix_max <- prix
+					produit_max <- produit
+			FinSi
+			
+			Si prix < prix_min
+				Alors
+					prix_min <- prix
+					produit_min <- produit
+			FinSi
+			
+			Ecrire ("Voulez-vous indiquer un autre prix? (0 pour oui, N pour non")
+			Lire (continuer)
+			
+	FinTantque
+	
+	prix_moy <- total / i
+	
+	Ecrire ("Vous avez indiquez ", i, " prix")
+	Ecrire ("Le prix moyen est : ", prix_moyen)
+	Ecrire ("Le produit le moins cher est : " ,produit_min, "pour un prix de : ", prix_min)
+	Ecrire ("Le produit le plus cher est : " ,produit_max, "pour un prix de : ", produit_max
+			
+Fin: prix_produits
+			
+			
+			
+			
+			

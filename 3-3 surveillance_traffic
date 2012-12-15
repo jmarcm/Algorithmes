@@ -1,0 +1,41 @@
+Données à entrer:
+	le nbre de véhicules
+	le seuil de jour
+	le seuil de nuit
+	
+Structure répétitive:
+	un relévé par heure pendant 24h --> nbre déterminé --> POUR
+	
+Test:
+	Distinguer les 12 premiers relevés des 12 suivants --> nouvel index
+
+
+Algo: surveillance_traffic
+
+Déclarations:
+	v: réel {le nombre de véhicules}
+	sj: entier {le seuil de jour}
+	sn: entier {le seuil de nuit}
+	i: entier 
+	rj: entier {le compteur des relevés de la journée}
+	rn: entier {le compteur des relevés de la nuit}
+	
+	
+Début:
+	rj <- 0
+	rn <- 0
+	
+	Pour i allant de 1 à 24
+		Faire			
+			
+			Ecrire ("Donner le nombre de véhicules: ")
+			Lire (v)
+			
+			Si i <= 12 Et v >= sj Alors rj <- rj + 1 FinSi
+			Si i >= 12 ET v >= sn Alors rn <- rn + 1 FinSi
+			
+	FinPour
+	
+	Si rj >= 5 Ou rn >= 3 Alors Ecrire ("Attention, ce carrefour est dangeureux!!!") FinSi
+
+Fin: surveillance_traffic
